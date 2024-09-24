@@ -1,14 +1,11 @@
+import { Link } from 'react-router-dom'
 import useUser from 'host/hooks/useUser'
-// import useAbilities from 'host/hooks/useAbilities'
 import abilities from 'host/abilities'
 import AbilityContext from 'host/contexts/AbilityContext'
 import ButtonNav from './components/ButtonNav'
 
 const App = () => {
   const user = useUser()
-  // const abilities = useAbilities()
-
-  // console.log('REMOTE1', abilities.rules)
 
   return (
     <AbilityContext.Provider value={abilities}>
@@ -19,6 +16,7 @@ const App = () => {
           <p>User: {user.name}</p>
         }
         <ButtonNav />
+        <Link to="/app2">App2</Link>
       </div>
     </AbilityContext.Provider>
   )

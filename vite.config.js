@@ -20,6 +20,7 @@ export default defineConfig({
         '@casl/ability',
         '@casl/react',
         'zustand',
+        'react-router-dom',
       ],
     }),
   ],
